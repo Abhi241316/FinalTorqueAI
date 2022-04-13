@@ -1,0 +1,95 @@
+{% extends "layouts/base.html" %}
+
+  
+
+
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+
+
+
+
+		<link rel="stylesheet" type="text/css" href="/static/assets/css/plugins/CameraCapture/captureImages.css"> 
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+
+      
+        <style>
+.button1 {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+
+
+
+        <form class="grid" action="/result" method="POST">
+
+          {% if name %}
+            <center>
+              <h3 style="color: blue;" class="let_space">Hello {{name}}, How was your day!!</h3>
+            </center> 
+
+          {% endif %}
+           
+          <label for="name">Enter the folder name:</label>
+          <input type="text" id="name" name="name">
+          <h3 style="color: blue;" class="let_space">{{test1}}</h3>
+
+          <center><input class="file_submit" type="Submit"></center>
+
+         <h5><a href="{{ url_for('namehais') }}">GO TO DATASET CAPTURE</a></h1>
+          
+
+        </form>
+
+
+
+{% endblock content %}
+
+{% block javascripts %}
+
+    <script src="/static/assets/plugins/chart-morris/js/raphael.min.js"></script>
+    <script src="/static/assets/plugins/chart-morris/js/morris.min.js"></script>
+    <script src="/static/assets/js/pages/chart-morris-custom.js"></script>
+
+{% endblock javascripts %}

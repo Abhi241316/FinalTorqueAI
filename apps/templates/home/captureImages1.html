@@ -1,0 +1,59 @@
+
+{% extends "layouts/base.html" %}
+
+  
+
+
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}
+
+
+		<link rel="stylesheet" type="text/css" href="/static/assets/css/plugins/CameraCapture/captureImages.css"> 
+
+{% endblock stylesheets %}
+
+
+{% block content %}
+
+
+
+        <form class="grid" action="/result" method="POST">
+
+          {% if name %}
+            <center>
+              <h3 style="color: blue;" class="let_space">Hello {{name}}, How was your day!!</h3>
+            </center> 
+
+          {% endif %}
+           
+          <label for="name">Enter the folder name:</label>
+          <input type="text" id="name" name="name">
+
+
+          <center><input class="file_submit" type="Submit"></center>
+
+          <h5><a href="{{ url_for('namehais') }}">GO TO DATASET CAPTURE</a></h1>
+           
+
+        </form>
+
+
+
+
+
+{% endblock content %}
+
+{% block javascripts %}
+
+    <script src="/static/assets/plugins/chart-morris/js/raphael.min.js"></script>
+    <script src="/static/assets/plugins/chart-morris/js/morris.min.js"></script>
+    <script src="/static/assets/js/pages/chart-morris-custom.js"></script>
+
+
+
+
+
+
+{% endblock javascripts %}
+
