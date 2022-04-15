@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
                                                                    CUSTOM AUTOMATED AI MODULE GENERATION
 
 --------------- Frontend and Backend ---------------------------
@@ -108,6 +108,24 @@ On the sidebar menu goto :- 1) FOLDER CREATION: enter the folder name "example: 
                                                 d) enter the second label
                                                 
 
+-------------------------------------------------------- VastAi -----------------------------------------------------------------------------
+For Vast Ai connection: 
 
+Step:1. Generate ssh key and follow the following steps:
+	
+	a) ssh-keygen -t rsa
+
+
+	b) ssh-add
+
+
+	c) Cat id_rsa.pub
+
+
+Step:2. Now copy the key content and paste it in to the change ssh key in accounts section. 
+
+Step:3. For uploading the files into the vastAi system:
+
+	a) Scp -P 17911 FinalTorqueAI-main.zip root@ssh5.vast.ai:/root/torque
                                                                    
->>>>>>> 6a2ed42565d2a0f2aed44c34a5bcdeb842b6a2f5
+
